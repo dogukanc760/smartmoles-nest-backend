@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { UserSetting } from '../../../core/entities';
 import { IDataService } from '../../../core/abstracts';
-import { UserSettingFactoryService } from './UserSetting-factory.service';
+import { UserSettingFactoryService } from './usersetting-factory.service';
 import { CreateUserSettingDto, UpdateUserSettingDto } from 'src/core/dtos';
 
 @Injectable()
@@ -17,7 +17,7 @@ export class UserSettingServices {
 
   async getUserSettingByUser(id: any): Promise<UserSetting[]> {
     const userSettings = (await this.dataServices.userSettings.getAll()).filter(
-      (x) => x.userId == id
+      (x) => x.userId == id,
     );
     return userSettings;
   }
@@ -29,7 +29,9 @@ export class UserSettingServices {
   createCall(createUserSettingDto: CreateUserSettingDto): Promise<UserSetting> {
     try {
       const userSettings =
-        this.UserSettingFactoryService.createNewUserSetting(createUserSettingDto);
+        this.UserSettingFactoryService.createNewUserSetting(
+          createUserSettingDto,
+        );
       return this.dataServices.userSettings.create(userSettings);
     } catch (error) {
       console.log(error);
@@ -41,7 +43,8 @@ export class UserSettingServices {
     callId: string,
     updateCallDto: UpdateUserSettingDto,
   ): Promise<UserSetting> {
-    const userSettings = this.UserSettingFactoryService.updateUserSetting(updateCallDto);
+    const userSettings =
+      this.UserSettingFactoryService.updateUserSetting(updateCallDto);
     return this.dataServices.userSettings.update(callId, userSettings);
   }
 }

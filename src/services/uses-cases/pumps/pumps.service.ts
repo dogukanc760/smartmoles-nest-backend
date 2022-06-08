@@ -1,8 +1,7 @@
 import { Injectable } from '@nestjs/common';
-import { IDataService } from '../../../core';
+import { IDataService, Pumps } from '../../../core';
 import { PumpsFactoryService } from './pumps-factory.service';
 import { CreatePumpsDto, UpdatePumpsDto } from '../../../core/dtos';
-import { Pumps } from '../../../core/entities/Pumps/Pumps.models';
 
 @Injectable()
 export class PumpsService {

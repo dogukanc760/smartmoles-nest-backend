@@ -30,6 +30,9 @@ export * from './permissions/permission-groups.models';
 //subscription
 export * from './subscription/subscription.models';
 
+//pumps
+export * from './pumps/pumps.models';
+
 //users
 export * from './users/users-new.models';
 
