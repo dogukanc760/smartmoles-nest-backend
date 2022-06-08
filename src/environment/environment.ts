@@ -1,0 +1,43 @@
+export default {
+  mongoUrl:
+    'mongodb+srv://dogukanc760:kcinar22@cluster0.7hwvw.mongodb.net/SmartFarm?retryWrites=true&w=majority',
+  hashText: 'myStrongPasswordHashText',
+  jwtText: '32dhfnct94q',
+  cloudinary: {
+    cloud_name: 'your_own_cloud_name',
+    api_key: 'your_own_api_key',
+    api_secret: 'your_own_api_secret',
+  },
+  api_results: {
+    success_created: 'The record has been successfully created',
+    failed_created: 'The record didnt create',
+    success_update: 'The record has been successfully updated',
+    failed_update: 'The record has been didnt update',
+    success: 'Process has been successfully',
+    failed: 'Process has been failed',
+  },
+  socket_url: {
+    url: '',
+  },
+
+  global_messages: {
+    not_moisture_interval: 'Gerekli nem aralığında değildir.',
+    moisture_interval: 'Gerekli nem aralığındadır.',
+    hour_clock: 'Gerekli saat aralığındadır.',
+    not_hour_clock: 'Gerekli saat aralığında değildir',
+    hub_control: 'Hub Kontrolü Başladı',
+    hub_dont_access: 'Hubla iletişim/erişim sırasında bir hata oluştu.',
+    hub_error: 'Hub İletişiminde Hata',
+    card_read: 'Kart Okuma Başarılı',
+    failed_card_read: 'Kart Okuma Başarısız, Tekrar Deneyiniz.',
+    moisture_read: 'Nem Okuma Başarılı!',
+    failed_moisture_read: 'Nem okuma başarısız!',
+    hour_read: 'Saat/Tarih Okuma Başarılı!',
+    failed_hour_read: 'Saat/Tarih Okuma Başarısız!',
+  },
+
+  autoValve_messages: {},
+  manuelValve_messages: {},
+  hubControl_messages: {},
+  user_messages: {},
+};
