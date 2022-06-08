@@ -4,6 +4,17 @@
   "description": "",
   "author": "",
   "private": true,
+  "compilerOptions": {
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noUnusedLocals": true,
+    "outDir": "dist",
+    "sourceMap": true,
+    "target": "es6"
+  },
+
   "license": "UNLICENSED",
   "engines": {
     "node": "16.14.0"
