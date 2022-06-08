@@ -19,6 +19,7 @@
     "node": "16.14.0"
   },
   "scripts": {
+    "heroku-postbuild": "npm install && npm install --only=dev --no-shrinkwrap && npm run build",
     "prebuild": "rimraf dist",
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
