@@ -7,6 +7,7 @@ import { AllExceptionFilter } from './libs/all-exception.filters';
 async function bootstrap() {
   console.log('asdf');
   const app = await NestFactory.create(AppModule);
+  app.enableCors();
   const { httpAdapter } = app.get(HttpAdapterHost);
   app.useGlobalFilters(new AllExceptionFilter(httpAdapter));
   // this for global url, for example : localhost:3000/api/
@@ -19,7 +20,7 @@ async function bootstrap() {
     .build();
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('api', app, document);
-  await app.listen(3000);
+  await app.listen(process.env.PORT || 3000);
 }
 
 bootstrap();
