@@ -5,7 +5,7 @@ import { AppModule } from './app.module';
 import { AllExceptionFilter } from './libs/all-exception.filters';
 
 async function bootstrap() {
-  console.log('asdf');
+  console.log('Main TS');
   const app = await NestFactory.create(AppModule);
   app.enableCors();
   const { httpAdapter } = app.get(HttpAdapterHost);
@@ -20,7 +20,7 @@ async function bootstrap() {
     .build();
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('api', app, document);
-  await app.listen(process.env.PORT || 3000);
+  await app.listen(process.env.PORT || 3005);
 }
 
 bootstrap();

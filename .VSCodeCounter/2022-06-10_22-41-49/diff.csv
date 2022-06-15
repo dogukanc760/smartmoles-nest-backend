@@ -1,0 +1,9 @@
+"filename", "language", "TypeScript", "comment", "blank", "total"
+"c:\Users\Dodo\Desktop\Projeler\smartmoles-nest-backend\src\controllers\qrCode.controller.ts", "TypeScript", 0, 0, -1, -1
+"c:\Users\Dodo\Desktop\Projeler\smartmoles-nest-backend\src\core\dtos\centralUnit\valveCard.dto.ts", "TypeScript", 24, 0, 1, 25
+"c:\Users\Dodo\Desktop\Projeler\smartmoles-nest-backend\src\core\entities\centralUnit\valveCard.model.ts", "TypeScript", 2, 0, 1, 3
+"c:\Users\Dodo\Desktop\Projeler\smartmoles-nest-backend\src\frameworks\data-services\mongo\model\centralUnit\valveCard.model.ts", "TypeScript", 4, 0, 3, 7
+"c:\Users\Dodo\Desktop\Projeler\smartmoles-nest-backend\src\operations\hubGroups\hubControl.ts", "TypeScript", 4, 0, 1, 5
+"c:\Users\Dodo\Desktop\Projeler\smartmoles-nest-backend\src\services\uses-cases\centralUnit\valveCard-factory.service.ts", "TypeScript", 4, 0, 0, 4
+"c:\Users\Dodo\Desktop\Projeler\smartmoles-nest-backend\src\services\uses-cases\centralUnit\valveCard.service.ts", "TypeScript", 5, 0, 1, 6
+"Total", "-", 43, 0, 6, 49

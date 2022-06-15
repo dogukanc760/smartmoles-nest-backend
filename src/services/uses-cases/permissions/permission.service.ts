@@ -8,7 +8,7 @@ export class PermissionService {
   constructor(
     private dataService: IDataService,
     private permissionFactoryService: PermissionFactoryService,
-  ) {}
+  ) { }
 
   async getAllPermissions(): Promise<Permission[]> {
     return await this.dataService.permission.getAll();

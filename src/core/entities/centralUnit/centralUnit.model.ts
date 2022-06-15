@@ -1,4 +1,6 @@
 export class CentralUnit {
+
+
   userId: string;
 
   projectImg: string;

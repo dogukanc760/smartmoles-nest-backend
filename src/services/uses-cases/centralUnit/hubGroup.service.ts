@@ -1,7 +1,11 @@
 import { Injectable } from '@nestjs/common';
 import { HubGroups, IDataService } from '../../../core';
 import { HubGroupFactoryService } from './hubGroup-factory.service';
-import { CreateHubGroupsDto, UpdateHubGroupsDto } from '../../../core/dtos';
+import {
+  CreateHubGroupsDto,
+  GetHubGroupsDto,
+  UpdateHubGroupsDto,
+} from '../../../core/dtos';
 
 @Injectable()
 export class HubGroupService {
@@ -11,6 +15,10 @@ export class HubGroupService {
   ) {}
 
   async getAllHubGroups(): Promise<HubGroups[]> {
+    return await this.dataService.hubGroups.getAll();
+  }
+
+  async getAllHubGroupsWithDTO(): Promise<any> {
     return await this.dataService.hubGroups.getAll();
   }
 
@@ -32,7 +40,10 @@ export class HubGroupService {
     return await this.dataService.hubGroups.create(newHub);
   }
 
-  async updateHubGroup(id: any, updateHubGroupDto: UpdateHubGroupsDto) {
+  async updateHubGroup(
+    id: any,
+    updateHubGroupDto: UpdateHubGroupsDto,
+  ): Promise<HubGroups> {
     const updateHub =
       this.hubGroupsFactoryService.updateHubGroup(updateHubGroupDto);
     return await this.dataService.hubGroups.update(id, updateHub);

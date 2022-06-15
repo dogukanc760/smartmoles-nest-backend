@@ -1,13 +1,15 @@
-import { Injectable } from '@nestjs/common';
+import { Inject, Injectable } from '@nestjs/common';
 import { CreateCardDto, UpdateCardDto } from 'src/core/dtos';
 import { Card } from 'src/core/entities';
 
 import { IDataService } from '../../../core/abstracts';
 import { CardFactoryService } from './card-factory.service';
+import { ClientProxy } from '@nestjs/microservices';
 
 @Injectable()
 export class CardServices {
   constructor(
+    @Inject('GREETING_SERVICE') private client: ClientProxy,
     private dataServices: IDataService,
     private CardFactoryService: CardFactoryService,
   ) {}
@@ -35,6 +37,26 @@ export class CardServices {
       console.log(error);
       return error;
     }
+  }
+
+  async getHello() {
+    return this.client.send({ cmd: 'greeting' }, 'Progressive Coder');
+  }
+
+  async getHelloAsync() {
+    const message = await this.client.send(
+      { cmd: 'greeting-async' },
+      'Progressive Coder',
+    );
+    return message;
+  }
+
+  async connectToCard() {
+    const message = await this.client.send(
+      { cmd: 'connect-card' },
+      'Konsept 1',
+    );
+    return message;
   }
 
   updateCall(callId: string, updateCallDto: UpdateCardDto): Promise<Card> {

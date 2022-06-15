@@ -11,6 +11,12 @@ export class HubGroups {
   name: string;
   @Prop()
   deviceType: string;
+
+  @Prop()
+  hubHour: string;
+  @Prop()
+  hubDate: string;
+
   @Prop()
   code: string;
   @Prop()

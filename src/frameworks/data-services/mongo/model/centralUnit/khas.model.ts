@@ -28,6 +28,13 @@ export class Khas {
   status: string;
   @Prop()
   valveChecks: string;
+  @Prop()
+  responseRangeWhenIrrigation: string;
+  @Prop()
+  responseRangeNonIrrigation: string;
+  @Prop()
+  // x ten y ye kadar olan değerlik aralığı bir nevi logaritmik limit
+  moistureLimitRange: string[];
   @Prop({ default: true })
   isActive: boolean;
 }

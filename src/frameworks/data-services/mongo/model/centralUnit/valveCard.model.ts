@@ -7,6 +7,10 @@ export type ValveCardDocument = ValveCard & Document;
 export class ValveCard {
   @Prop({ required: true })
   userId: string;
+
+  @Prop()
+  hubGroupId: string;
+
   @Prop()
   deviceId: string;
   @Prop()
@@ -15,6 +19,26 @@ export class ValveCard {
   waterMeter: string;
   @Prop()
   waterSensor: string;
+
+  @Prop()
+  valveWorkTime: string;
+
+  @Prop()
+  pressureSensor: boolean;
+  @Prop()
+  responseRangeWhenIrrigation: string;
+  @Prop()
+  responseRangeNonIrrigation: string;
+  @Prop()
+  numberOfPulses: number;
+  @Prop()
+  virtualPump: boolean;
+  @Prop()
+  boxMoistureSensor: boolean;
+  @Prop()
+  gpsModule: boolean;
+  @Prop()
+  barcodeNo: string;
 
   @Prop({ default: true })
   isActive: boolean;

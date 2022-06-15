@@ -16,6 +16,10 @@ export class KhasFactoryService {
     newKhas.irrigationTypes = createKhasDto.irrigationTypes;
     newKhas.status = createKhasDto.status;
     newKhas.valveChecks = createKhasDto.valveCheck;
+    newKhas.responseRangeNonIrrigation =
+      createKhasDto.responseRangeNonIrrigation;
+    newKhas.responseRangeWhenIrrigation =
+      createKhasDto.responseRangeWhenIrrigation;
     newKhas.isActive = createKhasDto.isActive;
 
     return newKhas;
@@ -33,6 +37,10 @@ export class KhasFactoryService {
     newKhas.irrigationTypes = updateKhasDto.irrigationTypes;
     newKhas.status = updateKhasDto.status;
     newKhas.valveChecks = updateKhasDto.valveCheck;
+    newKhas.responseRangeNonIrrigation =
+      updateKhasDto.responseRangeNonIrrigation;
+    newKhas.responseRangeWhenIrrigation =
+      updateKhasDto.responseRangeWhenIrrigation;
     newKhas.isActive = updateKhasDto.isActive;
 
     return newKhas;

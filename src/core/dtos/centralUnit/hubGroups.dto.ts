@@ -12,6 +12,43 @@ export class CreateHubGroupsDto {
 
   @IsString()
   @IsNotEmpty()
+  hubHour: string;
+
+  @IsString()
+  @IsNotEmpty()
+  hubDate: string;
+
+  @IsString()
+  @IsNotEmpty()
+  deviceType: string;
+
+  @IsString()
+  code: string;
+  @IsString()
+  status: string;
+  @IsString()
+  valveCheck: string;
+  @IsBoolean()
+  isActive: boolean;
+}
+
+export class GetHubGroupsDto {
+  _id: string;
+
+  @IsString()
+  @IsNotEmpty()
+  centralUnitId: string;
+
+  @IsString()
+  @IsNotEmpty()
+  hubHour: string;
+
+  @IsString()
+  @IsNotEmpty()
+  name: string;
+
+  @IsString()
+  @IsNotEmpty()
   deviceType: string;
 
   @IsString()

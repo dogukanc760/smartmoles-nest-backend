@@ -7,6 +7,10 @@ export class HubGroups {
 
   code: string;
 
+  hubHour: string;
+
+  hubDate: string;
+
   status: string;
 
   valveCheck: string;

@@ -18,6 +18,18 @@ export class Pumps {
   deviceName: string;
   @Prop()
   deviceLocation: string;
+  @Prop()
+  responseRangeWhenIrrigation: string;
+  @Prop()
+  responseRangeNonIrrigation: string;
+  @Prop()
+  waterMeter: string;
+  @Prop()
+  numberOfPulses: number;
+  @Prop()
+  boxMoistureSensor: boolean;
+  @Prop()
+  gpsModule: string;
   @Prop({ default: true })
   isActive: boolean;
 }

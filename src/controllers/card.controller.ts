@@ -47,4 +47,19 @@ export class CardController {
   ) {
     return this.CardServices.updateCall(CardId, updateCardDto);
   }
+
+  @Get('/connect/greeting')
+  async getHello() {
+    return this.CardServices.getHello();
+  }
+
+  @Get('/greeting-async')
+  async getHelloAsync() {
+    return this.CardServices.getHelloAsync();
+  }
+
+  @Get('/connect/connect-cart')
+  async connectCart() {
+    return this.CardServices.connectToCard();
+  }
 }

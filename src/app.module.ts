@@ -1,6 +1,8 @@
 import { CacheModule, MiddlewareConsumer, Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { ClientsModule, Transport } from '@nestjs/microservices';
+
 import { MongooseModule } from '@nestjs/mongoose';
 import environment from './environment/environment';
 
@@ -62,6 +64,26 @@ import { HubControlOperation } from './operations/hubGroups/hubControl';
 
 @Module({
   imports: [
+    ClientsModule.register([
+      {
+        name: 'GREETING_SERVICE',
+        transport: Transport.TCP,
+        options: {
+          host: '127.0.0.1',
+          port: 8080,
+        },
+      },
+    ]),
+    /*ClientsModule.register([
+      {
+        name: 'GREETING_SERVICE',
+        transport: Transport.TCP,
+        options: {
+          host: '188.38.15.71',
+          port: 2000,
+        },
+      },
+    ]),*/
     ScheduleModule.forRoot(),
     DataServicesModule,
     UserServicesModule,

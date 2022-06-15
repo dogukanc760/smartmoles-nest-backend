@@ -8,9 +8,9 @@ export class LoggerMiddleware implements NestMiddleware {
   constructor(private loggerService: LoggerService) {}
   use(req: Request, res: Response, next: NextFunction) {
     const createLogDto = new CreateLoggerDto();
-    console.log(req.route);
-    console.log(req.body);
-    console.log(req.ip);
+    console.log(req.route + 'route');
+    console.log(req.body.toString() + 'body');
+    console.log(req.ip + 'ip');
     createLogDto.logTitle = req.body.title;
     createLogDto.logDescription = req.body.description;
     createLogDto.logContent = req.body.content;

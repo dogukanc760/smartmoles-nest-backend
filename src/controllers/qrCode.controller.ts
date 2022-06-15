@@ -22,7 +22,6 @@ import { TransformInterceptor } from 'src/libs/api-results/standart-results';
 import { CreateQrCodeDto, UpdateQrCodeDto } from '../core/dtos';
 import { QrCodeServices } from 'src/services';
 
-
 @Controller('/qrcode')
 @ApiTags('QrCode Endpoints')
 @UseInterceptors(TransformInterceptor)

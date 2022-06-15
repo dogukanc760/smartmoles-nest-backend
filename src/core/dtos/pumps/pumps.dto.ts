@@ -1,4 +1,4 @@
-import { IsBoolean, IsString } from 'class-validator';
+import { IsBoolean, IsNumber, IsString } from 'class-validator';
 import { PartialType } from '@nestjs/mapped-types';
 
 export class CreatePumpsDto {
@@ -14,6 +14,18 @@ export class CreatePumpsDto {
   deviceName: string;
   @IsString()
   deviceLocation: string;
+  @IsString()
+  responseRangeWhenIrrigation: string;
+  @IsString()
+  responseRangeNonIrrigation: string;
+  @IsString()
+  waterMeter: string;
+  @IsNumber()
+  numberOfPulses: number;
+  @IsBoolean()
+  boxMoistureSensor: boolean;
+  @IsString()
+  gpsModule: string;
   @IsBoolean()
   isActive: boolean;
 }

@@ -8,7 +8,7 @@ export class ValveCardService {
   constructor(
     private dataService: IDataService,
     private valveCardFactoryService: ValveCardFactoryService,
-  ) {}
+  ) { }
 
   async getAllValveCard(): Promise<ValveCard[]> {
     return await this.dataService.valveCard.getAll();
@@ -21,6 +21,12 @@ export class ValveCardService {
   async getValveCardByUser(id: any): Promise<ValveCard[]> {
     return (await this.dataService.valveCard.getAll()).filter(
       (x) => x.userId == id,
+    );
+  }
+
+  async getValveCardByCentralUnit(id: any): Promise<ValveCard[]> {
+    return (await this.dataService.valveCard.getAll()).filter(
+      (x) => x.hubGroupId == id,
     );
   }
 

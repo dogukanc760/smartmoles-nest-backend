@@ -6,6 +6,8 @@ import { HubGroups } from '../../../core';
 export class HubGroupFactoryService {
   createHubGroup(createHubGroupDto: CreateHubGroupsDto) {
     const newHubGroup = new HubGroups();
+    newHubGroup.hubDate = createHubGroupDto.hubDate;
+    newHubGroup.hubHour = createHubGroupDto.hubHour;
     newHubGroup.centralUnitId = createHubGroupDto.centralUnitId;
     newHubGroup.name = createHubGroupDto.name;
     newHubGroup.deviceType = createHubGroupDto.deviceType;
@@ -19,6 +21,8 @@ export class HubGroupFactoryService {
 
   updateHubGroup(updateHubGroupDto: UpdateHubGroupsDto) {
     const newHubGroup = new HubGroups();
+    newHubGroup.hubDate = updateHubGroupDto.hubDate;
+    newHubGroup.hubHour = updateHubGroupDto.hubHour;
     newHubGroup.centralUnitId = updateHubGroupDto.centralUnitId;
     newHubGroup.name = updateHubGroupDto.name;
     newHubGroup.deviceType = updateHubGroupDto.deviceType;
