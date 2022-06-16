@@ -10,6 +10,7 @@ async function bootstrap() {
   app.enableCors();
   const { httpAdapter } = app.get(HttpAdapterHost);
   app.useGlobalFilters(new AllExceptionFilter(httpAdapter));
+
   // this for global url, for example : localhost:3000/api/
   app.setGlobalPrefix('api');
   const config = new DocumentBuilder()

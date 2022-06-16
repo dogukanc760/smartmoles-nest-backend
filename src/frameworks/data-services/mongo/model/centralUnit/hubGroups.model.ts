@@ -17,6 +17,10 @@ export class HubGroups {
   @Prop()
   hubDate: string;
 
+  serverIP: string;
+
+  serverPort: string;
+
   @Prop()
   code: string;
   @Prop()

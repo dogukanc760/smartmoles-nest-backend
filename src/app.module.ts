@@ -61,6 +61,10 @@ import { LoggerMiddleware } from './libs/middlewares/loggers/logger.middleware';
 import { LoggerServiceModule } from './services/uses-cases/logger/logger.module';
 import { HubGroupService } from './services';
 import { HubControlOperation } from './operations/hubGroups/hubControl';
+import { EnvironmentIterator } from './environment/environment-iterator';
+import { WinstonModule } from 'nest-winston';
+import * as winston from 'winston';
+import * as path from 'path';
 
 @Module({
   imports: [
@@ -74,6 +78,20 @@ import { HubControlOperation } from './operations/hubGroups/hubControl';
         },
       },
     ]),
+    WinstonModule.forRoot({
+      format: winston.format.combine(
+        winston.format.timestamp(),
+        winston.format.json(),
+      ),
+      transports: [
+        new winston.transports.Console(),
+        new winston.transports.File({
+          dirname: path.join(__dirname, './src/libs/debug'), //path to where save loggin result
+          filename: 'debug.log', //name of file where will be saved logging result
+          level: 'debug',
+        }),
+      ],
+    }),
     /*ClientsModule.register([
       {
         name: 'GREETING_SERVICE',
@@ -141,7 +159,13 @@ import { HubControlOperation } from './operations/hubGroups/hubControl';
 
     //UserSettingController,
   ],
-  providers: [AppService, CronService, HubGroupService, HubControlOperation],
+  providers: [
+    AppService,
+    CronService,
+    HubGroupService,
+    HubControlOperation,
+    EnvironmentIterator,
+  ],
 })
 export class AppModule {
   configure(consumer: MiddlewareConsumer) {

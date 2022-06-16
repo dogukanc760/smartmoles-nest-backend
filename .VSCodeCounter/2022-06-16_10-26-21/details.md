@@ -1,10 +1,10 @@
 # Details
 
-Date : 2022-06-08 09:57:31
+Date : 2022-06-16 10:26:21
 
 Directory c:\\Users\\Dodo\\Desktop\\Projeler\\smartmoles-nest-backend
 
-Total : 203 files,  23151 codes, 137 comments, 992 blanks, all 24280 lines
+Total : 206 files,  24688 codes, 295 comments, 1098 blanks, all 26081 lines
 
 [Summary](results.md) / Details / [Diff Summary](diff.md) / [Diff Details](diff-details.md)
 
@@ -15,14 +15,14 @@ Total : 203 files,  23151 codes, 137 comments, 992 blanks, all 24280 lines
 | [.prettierrc](/.prettierrc) | JSON | 4 | 0 | 0 | 4 |
 | [README.md](/README.md) | Markdown | 51 | 2 | 21 | 74 |
 | [nest-cli.json](/nest-cli.json) | JSON | 4 | 0 | 1 | 5 |
-| [package-lock.json](/package-lock.json) | JSON | 17,021 | 0 | 1 | 17,022 |
-| [package.json](/package.json) | JSON | 79 | 6 | 0 | 85 |
+| [package-lock.json](/package-lock.json) | JSON | 17,816 | 0 | 1 | 17,817 |
+| [package.json](/package.json) | JSON | 98 | 6 | 0 | 104 |
 | [src/app.controller.spec.ts](/src/app.controller.spec.ts) | TypeScript | 18 | 0 | 5 | 23 |
 | [src/app.controller.ts](/src/app.controller.ts) | TypeScript | 11 | 1 | 3 | 15 |
-| [src/app.module.ts](/src/app.module.ts) | TypeScript | 119 | 3 | 4 | 126 |
+| [src/app.module.ts](/src/app.module.ts) | TypeScript | 156 | 13 | 6 | 175 |
 | [src/app.service.ts](/src/app.service.ts) | TypeScript | 7 | 0 | 2 | 9 |
 | [src/controllers/callList.controller.ts](/src/controllers/callList.controller.ts) | TypeScript | 63 | 0 | 8 | 71 |
-| [src/controllers/card.controller.ts](/src/controllers/card.controller.ts) | TypeScript | 44 | 0 | 7 | 51 |
+| [src/controllers/card.controller.ts](/src/controllers/card.controller.ts) | TypeScript | 56 | 0 | 10 | 66 |
 | [src/controllers/centralUnit/centralUnit.controller.ts](/src/controllers/centralUnit/centralUnit.controller.ts) | TypeScript | 66 | 0 | 8 | 74 |
 | [src/controllers/centralUnit/hubGroups.controller.ts](/src/controllers/centralUnit/hubGroups.controller.ts) | TypeScript | 69 | 0 | 8 | 77 |
 | [src/controllers/centralUnit/khas.controller.ts](/src/controllers/centralUnit/khas.controller.ts) | TypeScript | 73 | 0 | 11 | 84 |
@@ -40,7 +40,7 @@ Total : 203 files,  23151 codes, 137 comments, 992 blanks, all 24280 lines
 | [src/controllers/permission/permission.controller.ts](/src/controllers/permission/permission.controller.ts) | TypeScript | 64 | 0 | 7 | 71 |
 | [src/controllers/permission/permissionGroup.controller.ts](/src/controllers/permission/permissionGroup.controller.ts) | TypeScript | 68 | 0 | 7 | 75 |
 | [src/controllers/pumps/pumps.controller.ts](/src/controllers/pumps/pumps.controller.ts) | TypeScript | 61 | 0 | 7 | 68 |
-| [src/controllers/qrCode.controller.ts](/src/controllers/qrCode.controller.ts) | TypeScript | 56 | 0 | 7 | 63 |
+| [src/controllers/qrCode.controller.ts](/src/controllers/qrCode.controller.ts) | TypeScript | 56 | 0 | 6 | 62 |
 | [src/controllers/subscription/subscription.controller.ts](/src/controllers/subscription/subscription.controller.ts) | TypeScript | 88 | 0 | 12 | 100 |
 | [src/controllers/user.controller.ts](/src/controllers/user.controller.ts) | TypeScript | 63 | 9 | 10 | 82 |
 | [src/controllers/userNew/usernew.controller.ts](/src/controllers/userNew/usernew.controller.ts) | TypeScript | 98 | 0 | 14 | 112 |
@@ -50,11 +50,11 @@ Total : 203 files,  23151 codes, 137 comments, 992 blanks, all 24280 lines
 | [src/core/abstracts/index.ts](/src/core/abstracts/index.ts) | TypeScript | 2 | 0 | 0 | 2 |
 | [src/core/dtos/callList.dto.ts](/src/core/dtos/callList.dto.ts) | TypeScript | 52 | 0 | 2 | 54 |
 | [src/core/dtos/card.dto.ts](/src/core/dtos/card.dto.ts) | TypeScript | 73 | 0 | 3 | 76 |
-| [src/core/dtos/centralUnit/centralUnit.dto.ts](/src/core/dtos/centralUnit/centralUnit.dto.ts) | TypeScript | 25 | 0 | 10 | 35 |
-| [src/core/dtos/centralUnit/hubGroups.dto.ts](/src/core/dtos/centralUnit/hubGroups.dto.ts) | TypeScript | 23 | 0 | 6 | 29 |
-| [src/core/dtos/centralUnit/khas.dto.ts](/src/core/dtos/centralUnit/khas.dto.ts) | TypeScript | 35 | 0 | 3 | 38 |
+| [src/core/dtos/centralUnit/centralUnit.dto.ts](/src/core/dtos/centralUnit/centralUnit.dto.ts) | TypeScript | 47 | 0 | 19 | 66 |
+| [src/core/dtos/centralUnit/hubGroups.dto.ts](/src/core/dtos/centralUnit/hubGroups.dto.ts) | TypeScript | 56 | 0 | 18 | 74 |
+| [src/core/dtos/centralUnit/khas.dto.ts](/src/core/dtos/centralUnit/khas.dto.ts) | TypeScript | 73 | 2 | 5 | 80 |
 | [src/core/dtos/centralUnit/pumps-khas.dto.ts](/src/core/dtos/centralUnit/pumps-khas.dto.ts) | TypeScript | 12 | 0 | 3 | 15 |
-| [src/core/dtos/centralUnit/valveCard.dto.ts](/src/core/dtos/centralUnit/valveCard.dto.ts) | TypeScript | 18 | 0 | 3 | 21 |
+| [src/core/dtos/centralUnit/valveCard.dto.ts](/src/core/dtos/centralUnit/valveCard.dto.ts) | TypeScript | 74 | 0 | 5 | 79 |
 | [src/core/dtos/contracts/contractType.dto.ts](/src/core/dtos/contracts/contractType.dto.ts) | TypeScript | 38 | 0 | 3 | 41 |
 | [src/core/dtos/contracts/user-contract.dto.ts](/src/core/dtos/contracts/user-contract.dto.ts) | TypeScript | 15 | 0 | 3 | 18 |
 | [src/core/dtos/hardwares/device-types.dto.ts](/src/core/dtos/hardwares/device-types.dto.ts) | TypeScript | 14 | 0 | 3 | 17 |
@@ -67,7 +67,7 @@ Total : 203 files,  23151 codes, 137 comments, 992 blanks, all 24280 lines
 | [src/core/dtos/logger/logger.dto.ts](/src/core/dtos/logger/logger.dto.ts) | TypeScript | 9 | 0 | 2 | 11 |
 | [src/core/dtos/permissions/permission.dto.ts](/src/core/dtos/permissions/permission.dto.ts) | TypeScript | 14 | 0 | 3 | 17 |
 | [src/core/dtos/permissions/permissions-groups.dto.ts](/src/core/dtos/permissions/permissions-groups.dto.ts) | TypeScript | 23 | 0 | 3 | 26 |
-| [src/core/dtos/pumps/pumps.dto.ts](/src/core/dtos/pumps/pumps.dto.ts) | TypeScript | 20 | 0 | 3 | 23 |
+| [src/core/dtos/pumps/pumps.dto.ts](/src/core/dtos/pumps/pumps.dto.ts) | TypeScript | 32 | 0 | 3 | 35 |
 | [src/core/dtos/qrCode.dto.ts](/src/core/dtos/qrCode.dto.ts) | TypeScript | 32 | 0 | 3 | 35 |
 | [src/core/dtos/subscription/subscription.dto.ts](/src/core/dtos/subscription/subscription.dto.ts) | TypeScript | 47 | 0 | 3 | 50 |
 | [src/core/dtos/user.dto.ts](/src/core/dtos/user.dto.ts) | TypeScript | 62 | 4 | 15 | 81 |
@@ -75,11 +75,11 @@ Total : 203 files,  23151 codes, 137 comments, 992 blanks, all 24280 lines
 | [src/core/dtos/usersetting.dto.ts](/src/core/dtos/usersetting.dto.ts) | TypeScript | 31 | 0 | 2 | 33 |
 | [src/core/entities/callList.model.ts](/src/core/entities/callList.model.ts) | TypeScript | 15 | 0 | 1 | 16 |
 | [src/core/entities/card.model.ts](/src/core/entities/card.model.ts) | TypeScript | 22 | 0 | 1 | 23 |
-| [src/core/entities/centralUnit/centralUnit.model.ts](/src/core/entities/centralUnit/centralUnit.model.ts) | TypeScript | 11 | 0 | 9 | 20 |
-| [src/core/entities/centralUnit/hubGroups.model.ts](/src/core/entities/centralUnit/hubGroups.model.ts) | TypeScript | 9 | 0 | 7 | 16 |
-| [src/core/entities/centralUnit/khas.model.ts](/src/core/entities/centralUnit/khas.model.ts) | TypeScript | 15 | 0 | 12 | 27 |
+| [src/core/entities/centralUnit/centralUnit.model.ts](/src/core/entities/centralUnit/centralUnit.model.ts) | TypeScript | 11 | 0 | 11 | 22 |
+| [src/core/entities/centralUnit/hubGroups.model.ts](/src/core/entities/centralUnit/hubGroups.model.ts) | TypeScript | 13 | 0 | 11 | 24 |
+| [src/core/entities/centralUnit/khas.model.ts](/src/core/entities/centralUnit/khas.model.ts) | TypeScript | 18 | 3 | 15 | 36 |
 | [src/core/entities/centralUnit/pumps-khas.model.ts](/src/core/entities/centralUnit/pumps-khas.model.ts) | TypeScript | 5 | 0 | 3 | 8 |
-| [src/core/entities/centralUnit/valveCard.model.ts](/src/core/entities/centralUnit/valveCard.model.ts) | TypeScript | 8 | 0 | 4 | 12 |
+| [src/core/entities/centralUnit/valveCard.model.ts](/src/core/entities/centralUnit/valveCard.model.ts) | TypeScript | 18 | 0 | 13 | 31 |
 | [src/core/entities/contracts/contractType.model.ts](/src/core/entities/contracts/contractType.model.ts) | TypeScript | 16 | 0 | 2 | 18 |
 | [src/core/entities/contracts/user-contract.model.ts](/src/core/entities/contracts/user-contract.model.ts) | TypeScript | 8 | 0 | 2 | 10 |
 | [src/core/entities/hardwares/device-types.models.ts](/src/core/entities/hardwares/device-types.models.ts) | TypeScript | 6 | 0 | 1 | 7 |
@@ -88,26 +88,27 @@ Total : 203 files,  23151 codes, 137 comments, 992 blanks, all 24280 lines
 | [src/core/entities/hardwares/irrigation-types.model.ts](/src/core/entities/hardwares/irrigation-types.model.ts) | TypeScript | 8 | 0 | 3 | 11 |
 | [src/core/entities/hardwares/modem.models.ts](/src/core/entities/hardwares/modem.models.ts) | TypeScript | 6 | 0 | 4 | 10 |
 | [src/core/entities/hardwares/simcards.models.ts](/src/core/entities/hardwares/simcards.models.ts) | TypeScript | 8 | 0 | 3 | 11 |
-| [src/core/entities/index.ts](/src/core/entities/index.ts) | TypeScript | 23 | 7 | 8 | 38 |
+| [src/core/entities/index.ts](/src/core/entities/index.ts) | TypeScript | 24 | 8 | 9 | 41 |
 | [src/core/entities/logger/logger.models.ts](/src/core/entities/logger/logger.models.ts) | TypeScript | 9 | 0 | 1 | 10 |
 | [src/core/entities/permissions/permission-groups.models.ts](/src/core/entities/permissions/permission-groups.models.ts) | TypeScript | 9 | 0 | 2 | 11 |
 | [src/core/entities/permissions/permission.model.ts](/src/core/entities/permissions/permission.model.ts) | TypeScript | 6 | 0 | 1 | 7 |
-| [src/core/entities/pumps/pumps.models.ts](/src/core/entities/pumps/pumps.models.ts) | TypeScript | 9 | 0 | 2 | 11 |
+| [src/core/entities/pumps/pumps.models.ts](/src/core/entities/pumps/pumps.models.ts) | TypeScript | 15 | 0 | 2 | 17 |
 | [src/core/entities/qrCode.model.ts](/src/core/entities/qrCode.model.ts) | TypeScript | 9 | 0 | 1 | 10 |
 | [src/core/entities/subscription/subscription.models.ts](/src/core/entities/subscription/subscription.models.ts) | TypeScript | 23 | 0 | 3 | 26 |
 | [src/core/entities/user.model.ts](/src/core/entities/user.model.ts) | TypeScript | 14 | 6 | 3 | 23 |
 | [src/core/entities/users/users-new.models.ts](/src/core/entities/users/users-new.models.ts) | TypeScript | 30 | 0 | 5 | 35 |
 | [src/core/entities/usersetting.model.ts](/src/core/entities/usersetting.model.ts) | TypeScript | 8 | 0 | 1 | 9 |
 | [src/core/index.ts](/src/core/index.ts) | TypeScript | 2 | 0 | 0 | 2 |
-| [src/environment/environment.ts](/src/environment/environment.ts) | TypeScript | 22 | 0 | 1 | 23 |
+| [src/environment/environment-iterator.ts](/src/environment/environment-iterator.ts) | TypeScript | 8 | 0 | 3 | 11 |
+| [src/environment/environment.ts](/src/environment/environment.ts) | TypeScript | 46 | 0 | 4 | 50 |
 | [src/environment/index.ts](/src/environment/index.ts) | TypeScript | 1 | 0 | 1 | 2 |
 | [src/frameworks/data-services/mongo/model/callList.model.ts](/src/frameworks/data-services/mongo/model/callList.model.ts) | TypeScript | 32 | 0 | 4 | 36 |
 | [src/frameworks/data-services/mongo/model/card.model.ts](/src/frameworks/data-services/mongo/model/card.model.ts) | TypeScript | 46 | 0 | 4 | 50 |
 | [src/frameworks/data-services/mongo/model/centralUnit/centralUnit.models.ts](/src/frameworks/data-services/mongo/model/centralUnit/centralUnit.models.ts) | TypeScript | 24 | 1 | 5 | 30 |
-| [src/frameworks/data-services/mongo/model/centralUnit/hubGroups.model.ts](/src/frameworks/data-services/mongo/model/centralUnit/hubGroups.model.ts) | TypeScript | 20 | 1 | 5 | 26 |
-| [src/frameworks/data-services/mongo/model/centralUnit/khas.model.ts](/src/frameworks/data-services/mongo/model/centralUnit/khas.model.ts) | TypeScript | 31 | 1 | 4 | 36 |
+| [src/frameworks/data-services/mongo/model/centralUnit/hubGroups.model.ts](/src/frameworks/data-services/mongo/model/centralUnit/hubGroups.model.ts) | TypeScript | 26 | 1 | 9 | 36 |
+| [src/frameworks/data-services/mongo/model/centralUnit/khas.model.ts](/src/frameworks/data-services/mongo/model/centralUnit/khas.model.ts) | TypeScript | 37 | 2 | 4 | 43 |
 | [src/frameworks/data-services/mongo/model/centralUnit/pumps-khas.model.ts](/src/frameworks/data-services/mongo/model/centralUnit/pumps-khas.model.ts) | TypeScript | 12 | 1 | 6 | 19 |
-| [src/frameworks/data-services/mongo/model/centralUnit/valveCard.model.ts](/src/frameworks/data-services/mongo/model/centralUnit/valveCard.model.ts) | TypeScript | 18 | 1 | 5 | 24 |
+| [src/frameworks/data-services/mongo/model/centralUnit/valveCard.model.ts](/src/frameworks/data-services/mongo/model/centralUnit/valveCard.model.ts) | TypeScript | 38 | 1 | 9 | 48 |
 | [src/frameworks/data-services/mongo/model/contracts/contractTypes.models.ts](/src/frameworks/data-services/mongo/model/contracts/contractTypes.models.ts) | TypeScript | 34 | 0 | 4 | 38 |
 | [src/frameworks/data-services/mongo/model/contracts/user-contract-model.ts](/src/frameworks/data-services/mongo/model/contracts/user-contract-model.ts) | TypeScript | 16 | 1 | 4 | 21 |
 | [src/frameworks/data-services/mongo/model/hardwares/device-types.models.ts](/src/frameworks/data-services/mongo/model/hardwares/device-types.models.ts) | TypeScript | 15 | 1 | 4 | 20 |
@@ -120,7 +121,7 @@ Total : 203 files,  23151 codes, 137 comments, 992 blanks, all 24280 lines
 | [src/frameworks/data-services/mongo/model/logger/logger.model.ts](/src/frameworks/data-services/mongo/model/logger/logger.model.ts) | TypeScript | 20 | 1 | 4 | 25 |
 | [src/frameworks/data-services/mongo/model/permissions/permission-groups.model.ts](/src/frameworks/data-services/mongo/model/permissions/permission-groups.model.ts) | TypeScript | 21 | 1 | 4 | 26 |
 | [src/frameworks/data-services/mongo/model/permissions/permission.model.ts](/src/frameworks/data-services/mongo/model/permissions/permission.model.ts) | TypeScript | 15 | 1 | 4 | 20 |
-| [src/frameworks/data-services/mongo/model/pumps/pumps.model.ts](/src/frameworks/data-services/mongo/model/pumps/pumps.model.ts) | TypeScript | 21 | 1 | 4 | 26 |
+| [src/frameworks/data-services/mongo/model/pumps/pumps.model.ts](/src/frameworks/data-services/mongo/model/pumps/pumps.model.ts) | TypeScript | 33 | 1 | 4 | 38 |
 | [src/frameworks/data-services/mongo/model/qrCode.model.ts](/src/frameworks/data-services/mongo/model/qrCode.model.ts) | TypeScript | 20 | 0 | 4 | 24 |
 | [src/frameworks/data-services/mongo/model/subscription.model.ts/subscription.model.ts](/src/frameworks/data-services/mongo/model/subscription.model.ts/subscription.model.ts) | TypeScript | 48 | 1 | 4 | 53 |
 | [src/frameworks/data-services/mongo/model/user.model.ts](/src/frameworks/data-services/mongo/model/user.model.ts) | TypeScript | 30 | 0 | 15 | 45 |
@@ -132,33 +133,35 @@ Total : 203 files,  23151 codes, 137 comments, 992 blanks, all 24280 lines
 | [src/libs/all-exception.filters.ts](/src/libs/all-exception.filters.ts) | TypeScript | 12 | 0 | 2 | 14 |
 | [src/libs/api-results/standart-results.ts](/src/libs/api-results/standart-results.ts) | TypeScript | 31 | 0 | 3 | 34 |
 | [src/libs/middlewares/loggers/logger.middleware.ts](/src/libs/middlewares/loggers/logger.middleware.ts) | TypeScript | 25 | 0 | 2 | 27 |
-| [src/main.ts](/src/main.ts) | TypeScript | 21 | 1 | 4 | 26 |
+| [src/libs/middlewares/loggers/winston-logger.middleware.ts](/src/libs/middlewares/loggers/winston-logger.middleware.ts) | TypeScript | 0 | 0 | 1 | 1 |
+| [src/main.ts](/src/main.ts) | TypeScript | 22 | 1 | 5 | 28 |
 | [src/operations/cronTest/cronTest.ts](/src/operations/cronTest/cronTest.ts) | TypeScript | 11 | 0 | 3 | 14 |
-| [src/operations/cronTest/dynamicCron.ts](/src/operations/cronTest/dynamicCron.ts) | TypeScript | 108 | 0 | 24 | 132 |
+| [src/operations/cronTest/dynamicCron.ts](/src/operations/cronTest/dynamicCron.ts) | TypeScript | 24 | 88 | 25 | 137 |
 | [src/operations/cronTest/testFunc.ts](/src/operations/cronTest/testFunc.ts) | TypeScript | 23 | 2 | 6 | 31 |
+| [src/operations/hubGroups/hubControl.ts](/src/operations/hubGroups/hubControl.ts) | TypeScript | 410 | 53 | 37 | 500 |
 | [src/services/data-services.module.ts](/src/services/data-services.module.ts) | TypeScript | 7 | 0 | 2 | 9 |
 | [src/services/index.ts](/src/services/index.ts) | TypeScript | 23 | 7 | 8 | 38 |
 | [src/services/uses-cases/callList/callList-factory.service.ts](/src/services/uses-cases/callList/callList-factory.service.ts) | TypeScript | 40 | 4 | 6 | 50 |
 | [src/services/uses-cases/callList/callList-services.module.ts](/src/services/uses-cases/callList/callList-services.module.ts) | TypeScript | 10 | 0 | 2 | 12 |
 | [src/services/uses-cases/callList/callList-services.service.ts](/src/services/uses-cases/callList/callList-services.service.ts) | TypeScript | 41 | 0 | 7 | 48 |
 | [src/services/uses-cases/card/card-factory.service.ts](/src/services/uses-cases/card/card-factory.service.ts) | TypeScript | 54 | 4 | 6 | 64 |
-| [src/services/uses-cases/card/card-services.module.ts](/src/services/uses-cases/card/card-services.module.ts) | TypeScript | 10 | 0 | 3 | 13 |
-| [src/services/uses-cases/card/card-services.service.ts](/src/services/uses-cases/card/card-services.service.ts) | TypeScript | 37 | 0 | 8 | 45 |
+| [src/services/uses-cases/card/card-services.module.ts](/src/services/uses-cases/card/card-services.module.ts) | TypeScript | 23 | 0 | 2 | 25 |
+| [src/services/uses-cases/card/card-services.service.ts](/src/services/uses-cases/card/card-services.service.ts) | TypeScript | 56 | 0 | 11 | 67 |
 | [src/services/uses-cases/centralUnit/centralUnit-factory.service.ts](/src/services/uses-cases/centralUnit/centralUnit-factory.service.ts) | TypeScript | 32 | 0 | 5 | 37 |
 | [src/services/uses-cases/centralUnit/centralUnit-service.module.ts](/src/services/uses-cases/centralUnit/centralUnit-service.module.ts) | TypeScript | 10 | 0 | 2 | 12 |
 | [src/services/uses-cases/centralUnit/centralUnit.service.ts](/src/services/uses-cases/centralUnit/centralUnit.service.ts) | TypeScript | 44 | 0 | 8 | 52 |
-| [src/services/uses-cases/centralUnit/hubGroup-factory.service.ts](/src/services/uses-cases/centralUnit/hubGroup-factory.service.ts) | TypeScript | 28 | 0 | 5 | 33 |
+| [src/services/uses-cases/centralUnit/hubGroup-factory.service.ts](/src/services/uses-cases/centralUnit/hubGroup-factory.service.ts) | TypeScript | 36 | 0 | 5 | 41 |
 | [src/services/uses-cases/centralUnit/hubGroup-service.module.ts](/src/services/uses-cases/centralUnit/hubGroup-service.module.ts) | TypeScript | 10 | 0 | 2 | 12 |
-| [src/services/uses-cases/centralUnit/hubGroup.service.ts](/src/services/uses-cases/centralUnit/hubGroup.service.ts) | TypeScript | 37 | 0 | 8 | 45 |
-| [src/services/uses-cases/centralUnit/khas-factory.service.ts](/src/services/uses-cases/centralUnit/khas-factory.service.ts) | TypeScript | 36 | 0 | 5 | 41 |
+| [src/services/uses-cases/centralUnit/hubGroup.service.ts](/src/services/uses-cases/centralUnit/hubGroup.service.ts) | TypeScript | 47 | 0 | 9 | 56 |
+| [src/services/uses-cases/centralUnit/khas-factory.service.ts](/src/services/uses-cases/centralUnit/khas-factory.service.ts) | TypeScript | 44 | 0 | 5 | 49 |
 | [src/services/uses-cases/centralUnit/khas-service.module.ts](/src/services/uses-cases/centralUnit/khas-service.module.ts) | TypeScript | 10 | 0 | 2 | 12 |
 | [src/services/uses-cases/centralUnit/khas.service.ts](/src/services/uses-cases/centralUnit/khas.service.ts) | TypeScript | 41 | 0 | 10 | 51 |
 | [src/services/uses-cases/centralUnit/pumpKhas-factory.service.ts](/src/services/uses-cases/centralUnit/pumpKhas-factory.service.ts) | TypeScript | 24 | 0 | 5 | 29 |
 | [src/services/uses-cases/centralUnit/pumpKhas-service.module.ts](/src/services/uses-cases/centralUnit/pumpKhas-service.module.ts) | TypeScript | 10 | 0 | 2 | 12 |
 | [src/services/uses-cases/centralUnit/pumpsKhas.service.ts](/src/services/uses-cases/centralUnit/pumpsKhas.service.ts) | TypeScript | 33 | 0 | 8 | 41 |
 | [src/services/uses-cases/centralUnit/valveCard-factory.module.ts](/src/services/uses-cases/centralUnit/valveCard-factory.module.ts) | TypeScript | 10 | 0 | 2 | 12 |
-| [src/services/uses-cases/centralUnit/valveCard-factory.service.ts](/src/services/uses-cases/centralUnit/valveCard-factory.service.ts) | TypeScript | 26 | 0 | 3 | 29 |
-| [src/services/uses-cases/centralUnit/valveCard.service.ts](/src/services/uses-cases/centralUnit/valveCard.service.ts) | TypeScript | 40 | 0 | 9 | 49 |
+| [src/services/uses-cases/centralUnit/valveCard-factory.service.ts](/src/services/uses-cases/centralUnit/valveCard-factory.service.ts) | TypeScript | 46 | 0 | 3 | 49 |
+| [src/services/uses-cases/centralUnit/valveCard.service.ts](/src/services/uses-cases/centralUnit/valveCard.service.ts) | TypeScript | 45 | 0 | 10 | 55 |
 | [src/services/uses-cases/contracts/contractType-factory.service.ts](/src/services/uses-cases/contracts/contractType-factory.service.ts) | TypeScript | 42 | 0 | 5 | 47 |
 | [src/services/uses-cases/contracts/contractType.module.ts](/src/services/uses-cases/contracts/contractType.module.ts) | TypeScript | 10 | 0 | 2 | 12 |
 | [src/services/uses-cases/contracts/contractType.service.ts](/src/services/uses-cases/contracts/contractType.service.ts) | TypeScript | 40 | 0 | 7 | 47 |
@@ -183,7 +186,7 @@ Total : 203 files,  23151 codes, 137 comments, 992 blanks, all 24280 lines
 | [src/services/uses-cases/hardwares/simCard-factory.service.ts](/src/services/uses-cases/hardwares/simCard-factory.service.ts) | TypeScript | 24 | 0 | 5 | 29 |
 | [src/services/uses-cases/hardwares/simCards.module.ts](/src/services/uses-cases/hardwares/simCards.module.ts) | TypeScript | 10 | 0 | 2 | 12 |
 | [src/services/uses-cases/hardwares/simCards.service.ts](/src/services/uses-cases/hardwares/simCards.service.ts) | TypeScript | 38 | 0 | 8 | 46 |
-| [src/services/uses-cases/logger/logger-factory.service.ts](/src/services/uses-cases/logger/logger-factory.service.ts) | TypeScript | 16 | 0 | 3 | 19 |
+| [src/services/uses-cases/logger/logger-factory.service.ts](/src/services/uses-cases/logger/logger-factory.service.ts) | TypeScript | 17 | 0 | 3 | 20 |
 | [src/services/uses-cases/logger/logger.module.ts](/src/services/uses-cases/logger/logger.module.ts) | TypeScript | 10 | 0 | 2 | 12 |
 | [src/services/uses-cases/logger/logger.service.ts](/src/services/uses-cases/logger/logger.service.ts) | TypeScript | 18 | 0 | 4 | 22 |
 | [src/services/uses-cases/permissions/permission-factory.service.ts](/src/services/uses-cases/permissions/permission-factory.service.ts) | TypeScript | 24 | 0 | 5 | 29 |
@@ -194,7 +197,7 @@ Total : 203 files,  23151 codes, 137 comments, 992 blanks, all 24280 lines
 | [src/services/uses-cases/permissions/permissionGroups.service.ts](/src/services/uses-cases/permissions/permissionGroups.service.ts) | TypeScript | 42 | 0 | 7 | 49 |
 | [src/services/uses-cases/pumps/pumps-factory.service.ts](/src/services/uses-cases/pumps/pumps-factory.service.ts) | TypeScript | 26 | 0 | 5 | 31 |
 | [src/services/uses-cases/pumps/pumps.module.ts](/src/services/uses-cases/pumps/pumps.module.ts) | TypeScript | 10 | 0 | 2 | 12 |
-| [src/services/uses-cases/pumps/pumps.service.ts](/src/services/uses-cases/pumps/pumps.service.ts) | TypeScript | 33 | 0 | 7 | 40 |
+| [src/services/uses-cases/pumps/pumps.service.ts](/src/services/uses-cases/pumps/pumps.service.ts) | TypeScript | 32 | 0 | 7 | 39 |
 | [src/services/uses-cases/qrCode/qrCode-factory.service.ts](/src/services/uses-cases/qrCode/qrCode-factory.service.ts) | TypeScript | 28 | 4 | 6 | 38 |
 | [src/services/uses-cases/qrCode/qrCode-services.module.ts](/src/services/uses-cases/qrCode/qrCode-services.module.ts) | TypeScript | 10 | 0 | 3 | 13 |
 | [src/services/uses-cases/qrCode/qrCode-services.service.ts](/src/services/uses-cases/qrCode/qrCode-services.service.ts) | TypeScript | 41 | 0 | 9 | 50 |
@@ -209,7 +212,7 @@ Total : 203 files,  23151 codes, 137 comments, 992 blanks, all 24280 lines
 | [src/services/uses-cases/user/user-services.service.ts](/src/services/uses-cases/user/user-services.service.ts) | TypeScript | 29 | 11 | 10 | 50 |
 | [src/services/uses-cases/usersetting/usersetting-factory.service.ts](/src/services/uses-cases/usersetting/usersetting-factory.service.ts) | TypeScript | 26 | 4 | 6 | 36 |
 | [src/services/uses-cases/usersetting/usersetting-services.module.ts](/src/services/uses-cases/usersetting/usersetting-services.module.ts) | TypeScript | 10 | 0 | 3 | 13 |
-| [src/services/uses-cases/usersetting/usersetting-services.service.ts](/src/services/uses-cases/usersetting/usersetting-services.service.ts) | TypeScript | 41 | 0 | 7 | 48 |
+| [src/services/uses-cases/usersetting/usersetting-services.service.ts](/src/services/uses-cases/usersetting/usersetting-services.service.ts) | TypeScript | 44 | 0 | 7 | 51 |
 | [test/app.e2e-spec.ts](/test/app.e2e-spec.ts) | TypeScript | 20 | 0 | 5 | 25 |
 | [test/jest-e2e.json](/test/jest-e2e.json) | JSON | 9 | 0 | 1 | 10 |
 | [tsconfig.build.json](/tsconfig.build.json) | JSON | 3 | 2 | 0 | 5 |

@@ -1,4 +1,5 @@
 import { Inject, Injectable, Logger } from '@nestjs/common';
+import { Logger as LoggerWinston } from 'winston';
 import {
   CentralUnitService,
   HubGroupService,
@@ -13,7 +14,11 @@ import {
   GetKhasDto,
   UpdateHubGroupsDto,
 } from '../../core/dtos';
-import { ClientProxy } from '@nestjs/microservices';
+import { ClientProxy, ClientTCP } from '@nestjs/microservices';
+import environment from '../../environment/environment';
+import { EnvironmentIterator } from '../../environment/environment-iterator';
+import { LoggerService } from '../../services/uses-cases/logger/logger.service';
+import { CreateLoggerDto } from '../../core/dtos/logger/logger.dto';
 
 //YArın method gövdeleri doldurulup cron job olarak bağlanacaktır
 // ayrık metodlar tek bir cron job undan yönetilip sonuöçlara göre iletim yapılacaktır
@@ -25,19 +30,34 @@ export class HubControlOperation {
     private khasService: KhasService,
     private centralUnitService: CentralUnitService,
     private valveCardService: ValveCardService,
+    private environmentIterator: EnvironmentIterator,
+    private loggerService: LoggerService,
     @Inject('GREETING_SERVICE') private client: ClientProxy,
+    @Inject('winston')
+    private readonly loggerWinston: LoggerWinston,
   ) {}
+
+  //@Cron('*/10 * * * * *')
+  getEnvironmentIP() {
+    const ipServer = this.environmentIterator.getServerIP();
+
+    ipServer.forEach((x) => {
+      console.log(x);
+    });
+  }
+
   private readonly logger = new Logger(HubControlOperation.name);
   hubGroups: GetHubGroupsDto[] = [];
   khasDevices: GetKhasDto[] = [];
   khasInfo: GetKhasDto[] = [];
   getKhasInfos: Khas[] = [];
   centralUnits: GetCentralUnitDto[] = [];
+  //createLogDto: CreateLoggerDto;
 
   hubGroupDto = new GetHubGroupsDto();
   khas: any;
 
-  @Cron('*/60 * * * * *')
+  @Cron('*/45 * * * * *')
   //Rutin işlemleri başlatacak periyot zin ciri
   async processPeriod() {
     try {
@@ -81,32 +101,71 @@ export class HubControlOperation {
             this.logger.verbose(
               y.name + ' isimli Hub tarih ve saati çekildi, güncellendi!',
             );
+            const createLogDto = new CreateLoggerDto();
+            createLogDto.logUserId = '0';
+            createLogDto.logDescription = 'Hub Saat Güncellemesi';
+            createLogDto.logContent =
+              y.name + ' isimli Hub tarih ve saati çekildi, güncellendi!';
+            createLogDto.logLevel = '2';
+            createLogDto.logUser = '';
+            createLogDto.logTitle = y.name + ' Isimli Hub';
+            await this.loggerService.createLog(createLogDto);
           } else {
             this.logger.error(
               y.name + ' isimli hubdan tarih ve saat okunamadı',
             );
+            const createLogDto = new CreateLoggerDto();
+            createLogDto.logUserId = '0';
+            createLogDto.logDescription = 'Hub Saat Güncellemeside Yapılamadı';
+            createLogDto.logContent =
+              y.name + ' isimli Hubdan tarih ve saat okunamadı';
+            createLogDto.logLevel = '2';
+            createLogDto.logUser = '';
+            createLogDto.logTitle = y.name + ' Isimli Hub';
+            await this.loggerService.createLog(createLogDto);
           }
           const checkValveTime = await this.checkValveTimes(y._id);
           this.logger.verbose(
             'Huba bağlı vanaların çalışma zamanları kontrol ediliyor.',
           );
-          if (checkValveTime) {
+          const geciciDegisken = true;
+          if (/*checkValveTime*/ geciciDegisken) {
             const connect = await this.connectToSmartCard(
               y._id,
               'khasId',
               'userId',
               'userName',
-              'deviceIP',
-              'devicePort',
+              '127.0.0.1',
+              '8080',
             );
+            this.logger.verbose(connect);
             if (connect) {
               this.logger.verbose(
                 'Hub Çalışma zaman dilimi içerisindedir, bağlantı yapılıyor.',
               );
+              const createLogDto = new CreateLoggerDto();
+              createLogDto.logUserId = '0';
+              createLogDto.logDescription = 'Hub Çalışma Zamanı Bağlantısı';
+              createLogDto.logContent =
+                y.name +
+                ' isimli Hub çalışma zaman dilimi içerisindedir, bağlantı yapılıyor!';
+              createLogDto.logLevel = '2';
+              createLogDto.logUser = '';
+              createLogDto.logTitle = y.name + ' Isimli Hub';
+              await this.loggerService.createLog(createLogDto);
             } else {
               this.logger.error(
                 y.name + ' İsimli Hub Çalışma zaman dilimi dışarısındadır.',
               );
+              const createLogDto = new CreateLoggerDto();
+              createLogDto.logUserId = '0';
+              createLogDto.logDescription = 'Hub Çalışma Zamanı Dışındadır';
+              createLogDto.logContent =
+                y.name + ' İsimli Hub Çalışma zaman dilimi dışarısındadır.';
+              createLogDto.logLevel = '2';
+              createLogDto.logUser = '';
+              createLogDto.logTitle = y.name + ' Isimli Hub';
+              await this.loggerService.createLog(createLogDto);
             }
           } else {
             this.logger.error(
@@ -115,6 +174,15 @@ export class HubControlOperation {
                 y.name +
                 ' isimli cihazların çalışma bilgisi bulunamadı',
             );
+            const createLogDto = new CreateLoggerDto();
+            createLogDto.logUserId = '0';
+            createLogDto.logDescription = 'Hub Çalışma Bilgisi Bulunamadı';
+            createLogDto.logContent =
+              y.name + ' İsimli Hub Çalışma zaman bilgisi bulunamadı.';
+            createLogDto.logLevel = '2';
+            createLogDto.logUser = '';
+            createLogDto.logTitle = y.name + ' Isimli Hub';
+            await this.loggerService.createLog(createLogDto);
           }
         });
       } else {
@@ -276,13 +344,15 @@ export class HubControlOperation {
             x.hubGroupId +
               ' Idli gruba ait vana çalışma aralığında değil akıllı karta bağlanılıyor.',
           );
-          return false;
+          //burası normalde false sadece kod deneme için true yazdım
+          return true;
         }
       });
     } catch (e) {
       this.logger.error('Akıllı Kart Bilgisi Bulunamadı');
       console.log(e);
-      return false;
+      //normalde false fakat denemeler için true yazıldı
+      return true;
     }
   }
 
@@ -296,7 +366,41 @@ export class HubControlOperation {
     devicePort: string,
   ) {
     if (hubId) {
-      return true;
+      await (async () => {
+        const client = new ClientTCP({
+          host: deviceIP,
+          port: Number(devicePort),
+        });
+
+        await client.connect();
+
+        const pattern = { cmd: 'connect-card' };
+        const data =
+          'IP:' + deviceIP + ' Port:' + devicePort + ' HubId:' + hubId;
+
+        const result = await client
+          .send(pattern, data)
+          .toPromise()
+          .then((x) =>
+            this.logger.verbose(
+              'IPsi ' +
+                deviceIP +
+                ' olan ' +
+                hubId +
+                ' Id`li cihaza bağlantı başarılı',
+            ),
+          )
+          .catch((err) =>
+            this.logger.error(
+              'IPsi ' +
+                deviceIP +
+                ' olan ' +
+                hubId +
+                ' li cihaza bağlantı yapılamadı',
+            ),
+          );
+        return result;
+      })();
     }
     return false;
   }
@@ -377,15 +481,7 @@ export class HubControlOperation {
         .replace(/\./g, '/')
         .toString();
       const lastHour = new Date().getHours() + ':' + new Date().getMinutes();
-      console.log(
-        reservDate
-          .toLocaleDateString('tr-TR', {
-            year: 'numeric',
-            month: '2-digit',
-            day: '2-digit',
-          })
-          .replace(/\./g, '/'),
-      );
+
       getHubsById.hubHour = lastHour;
       getHubsById.hubDate = lastDate;
       await this.hubGroupService.updateHubGroup(hubGroupId, getHubsById);

@@ -12,6 +12,7 @@ export class LoggerFactoryService {
     logger.logLevel = createLogDto.logLevel;
     logger.logUser = createLogDto.logUser;
     logger.isActive = createLogDto.isActive;
+    logger.logUserId = createLogDto.logUserId;
 
     return logger;
   }

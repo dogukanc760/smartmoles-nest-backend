@@ -20,6 +20,12 @@ export default {
     url: '',
   },
 
+  tcp_ip: {
+    ip1: '123123',
+    ip2: '123123',
+    ip3: '123123',
+  },
+
   global_messages: {
     not_moisture_interval: 'Gerekli nem aralığında değildir.',
     moisture_interval: 'Gerekli nem aralığındadır.',

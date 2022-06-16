@@ -22,6 +22,10 @@ export class CreateHubGroupsDto {
   @IsNotEmpty()
   deviceType: string;
 
+  serverIP: string;
+
+  serverPort: string;
+
   @IsString()
   code: string;
   @IsString()
@@ -38,6 +42,10 @@ export class GetHubGroupsDto {
   @IsString()
   @IsNotEmpty()
   centralUnitId: string;
+
+  serverIP: string;
+
+  serverPort: string;
 
   @IsString()
   @IsNotEmpty()

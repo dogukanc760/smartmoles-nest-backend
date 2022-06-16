@@ -14,6 +14,8 @@ export class HubGroupFactoryService {
     newHubGroup.code = createHubGroupDto.code;
     newHubGroup.status = createHubGroupDto.status;
     newHubGroup.valveCheck = createHubGroupDto.valveCheck;
+    newHubGroup.serverIP = createHubGroupDto.serverIP;
+    newHubGroup.serverPort = createHubGroupDto.serverPort;
     newHubGroup.isActive = createHubGroupDto.isActive;
 
     return newHubGroup;
@@ -29,6 +31,8 @@ export class HubGroupFactoryService {
     newHubGroup.code = updateHubGroupDto.code;
     newHubGroup.status = updateHubGroupDto.status;
     newHubGroup.valveCheck = updateHubGroupDto.valveCheck;
+    newHubGroup.serverIP = updateHubGroupDto.serverIP;
+    newHubGroup.serverPort = updateHubGroupDto.serverPort;
     newHubGroup.isActive = updateHubGroupDto.isActive;
 
     return newHubGroup;

@@ -13,6 +13,10 @@ export class HubGroups {
 
   status: string;
 
+  serverIP: string;
+
+  serverPort: string;
+
   valveCheck: string;
 
   isActive: boolean;
